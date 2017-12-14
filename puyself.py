@@ -14,14 +14,15 @@ from googletrans import Translator
 #JANGAN LUPA =>  sudo pip install bs4 => sudo pip install BeautifulSoup => sudo pip install urllib => sudo pip install requests => sudo pip install gTTS
 
 cl = PUY.LINE()
-cl.login(qr=True)
+cl.login(token="EnUIK65XtOrGd35kaXx8.5obJH6xk6F34ZqgkqBnEMa.jXnoBBeRNuvnuE0Ee3b3Vr1R3nnHpqSI82qp73xhOt4=")
 cl.loginResult()
 
 print "\n[CIE BERHASIL LOGIN]"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpmsg ="""╠═════════════════
+Help ="""╠═════════════════
+╠-> Help (2,3,4,5,6)
 ╠-> google (text)
 ╠-> playstore (text)
 ╠-> Profileig (username)
@@ -34,8 +35,8 @@ helpmsg ="""╠═════════════════
 ╠-> Restart
 ╠-> lirik (text)
 ╠-> Mention
-╠-> setpoint on/off
-╠-> viewlastseen
+╠-> Lurk on/off
+╠-> Lurkers
 ╠-> protect on/off
 ╠-> qr on/off
 ╠-> invite on/off
@@ -52,7 +53,7 @@ helpmsg ="""╠═════════════════
 ╠-> id@jp\n                 「OR」\n╠-> helppro\n╠-> helpself\n╠-> helpset\n╠-> helpgrup\n╠-> helptranslate
 ╚═════════════════"""
 
-helppro ="""
+Help2 ="""
 ╠═════════════════
 ╠➩ protect on/off
 ╠➩ qr on/off
@@ -60,7 +61,7 @@ helppro ="""
 ╠➩ cancel on/off
 ╚═════════════════"""
 
-helpself ="""
+Help3 ="""
 ╠═════════════════
 ╠➩Me
 ╠➩Myname:
@@ -78,13 +79,13 @@ helpself ="""
 ╠➩Getpict @
 ╠➩Getcover @
 ╠➩Mention
-╠➩setpoint on/off
-╠➩viewlastseen
+╠➩Lurk on/off
+╠➩Lurkers
 ╠➩Micadd @
 ╠➩Micdel @
 ╚═════════════════"""
 
-helpset ="""
+Help4 ="""
 ╠═════════════════
 ╠->contact on/off
 ╠->autojoin on/off
@@ -97,7 +98,7 @@ helpset ="""
 ╠->simisimi on/off
 ╚═════════════════"""
 
-helpgrup ="""
+Help5 ="""
 ╠═════════════════
 ╠->Link on
 ╠->Url
@@ -120,7 +121,7 @@ helpgrup ="""
 ╠->Midban
 ╚═════════════════"""
 
-helptranslate ="""
+Help6 ="""
 ╠═════════════════
 ╠->Id@en
 ╠->En@id
@@ -140,7 +141,7 @@ helptranslate ="""
 KAC=[cl]
 mid = cl.getProfile().mid
 Bots=[mid]
-admin=["uac8e3eaf1eb2a55770bf10c3b2357c33"]
+admin=["ue4e06387a5cae9fdf8cd018a41b35e98"]
 
 wait = {
     "likeOn":False,
@@ -631,36 +632,36 @@ def bot(op):
                     cl.sendText(msg.to,msg.text)
             elif msg.text is None:
                 return
-            elif msg.text.lower() == 'help':
+            elif msg.text.lower() == 'Help':
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,helpmsg)
+                    cl.sendText(msg.to,Help)
                 else:
-                    cl.sendText(msg.to,helpmsg)
-            elif msg.text.lower() == 'help protect':
+                    cl.sendText(msg.to,Help)
+            elif msg.text.lower() == 'Help2':
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,helppro)
+                    cl.sendText(msg.to,Help2)
                 else:
-                    cl.sendText(msg.to,helppro)
-            elif msg.text.lower() == 'help self':
+                    cl.sendText(msg.to.Help2)
+            elif msg.text.lower() == 'Help3':
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,helpself)
+                    cl.sendText(msg.to,Help3)
                 else:
-                    cl.sendText(msg.to,helpself)
-            elif msg.text.lower() == 'help grup':
+                    cl.sendText(msg.to,Help3)
+            elif msg.text.lower() == 'Help4':
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,helpgrup)
+                    cl.sendText(msg.to.Help4)
                 else:
-                    cl.sendText(msg.to,helpgrup)
-            elif msg.text.lower() == 'help set':
+                    cl.sendText(msg.to,Help4)
+            elif msg.text.lower() == 'Help5':
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,helpset)
+                    cl.sendText(msg.to,Help5)
                 else:
-                    cl.sendText(msg.to,helpset)
-            elif msg.text.lower() == 'help translate':
+                    cl.sendText(msg.to,Help5)
+            elif msg.text.lower() == 'Help6':
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,helptranslate)
+                    cl.sendText(msg.to,Help6)
                 else:
-                    cl.sendText(msg.to,helptranslate)
+                    cl.sendText(msg.to,Help6)
             #elif msg.text in ["Sp","Speed","speed"]:
             #    start = time.time()
             #    cl.sendText(msg.to, "「Come Here」")
@@ -932,7 +933,7 @@ def bot(op):
                 cl.sendMessage(msg)
             elif cms(msg.text,["creator","Creator"]):
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': "ub14f769cdf42d8c8a618ebe91ac2c8c7"}
+                msg.contentMetadata = {'mid': "ue4e06387a5cae9fdf8cd018a41b35e98"}
                 cl.sendMessage(msg)
                 kk.sendMessage(msg)
             elif msg.text.lower() == 'autoadd on':
@@ -966,7 +967,7 @@ def bot(op):
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,"Pesan tambahan otomatis telah ditetapkan sebagai berikut \n\n" + wait["message"])
                 else:
-                    cl.sendText(msg.to,"Pesan tambahan otomatis telah ditetapkan sebagai berikut \n\n" + wait["message"])
+                    cl.sendText(msg.to,"Pesan tambahan otomatis telah dite,tapkan sebagai berikut \n\n" + wait["message"])
             elif "Come Set:" in msg.text:
                 c = msg.text.replace("Come Set:","")
                 if c in [""," ","\n",None]:
@@ -1497,7 +1498,7 @@ def bot(op):
                     if group.preventJoinByTicket is False: md += "\n\nKode Url : Diizinkan"
                     else: md += "\n\nKode Url : Diblokir"
                     if group.invitee is None: md += "\nJumlah Member : " + str(len(group.members)) + " Orang" + "\nUndangan Yang Belum Diterima : 0 Orang"
-                    else: md += "\nJumlah Member : " + str(len(group.members)) + " Orang" + "\nUndangan Yang Belum Diterima : " + str(len(group.invitee)) + " Orang"
+                    else: md += "\nJumlah Member : " + st:r(len(group.members)) + " Orang" + "\nUndangan Yang Belum Diterima : " + str(len(group.invitee)) + " Orang"
                     cl.sendText(msg.to,md)
             
             elif msg.text.lower() == 'grup id':
@@ -1538,7 +1539,7 @@ def bot(op):
                     except:
                         pass
 #==============================================================================#
-            elif "mention" == msg.text.lower():
+            elif "Mention" == msg.text.lower():
                  group = cl.getGroup(msg.to)
                  nama = [contact.mid for contact in group.members]
                  nm1, nm2, nm3, nm4, nm5, jml = [], [], [], [], [], len(nama)
@@ -1574,7 +1575,7 @@ def bot(op):
                  cnt.to = msg.to
                  cl.sendMessage(cnt)
 
-            elif "setpoint on" == msg.text.lower():
+            elif "Lurk on" == msg.text.lower():
                 if msg.to in wait2['readPoint']:
                         try:
                             del wait2['readPoint'][msg.to]
@@ -1606,7 +1607,7 @@ def bot(op):
                      print wait2
 
                     
-            elif "setpoint off" == msg.text.lower():
+            elif "Lurk off" == msg.text.lower():
                 if msg.to not in wait2['readPoint']:
                     cl.sendText(msg.to,"Setpoint already off")
                 else:
@@ -1620,7 +1621,7 @@ def bot(op):
 
 
                     
-            elif "viewlastseen" == msg.text.lower():
+            elif "Lurkers" == msg.text.lower():
                     if msg.to in wait2['readPoint']:
                         if wait2["ROM"][msg.to].items() == []:
                              cl.sendText(msg.to, "Reader:\nNone")
@@ -2480,7 +2481,7 @@ def bot(op):
 
             elif cms(msg.text,["/creator","Creator"]):
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': "ub14f769cdf42d8c8a618ebe91ac2c8c7"}
+                msg.contentMetadata = {'mid': "ue4e06387a5cae9fdf8cd018a41b35e98"}
                 cl.sendMessage(msg)
 
             #elif msg.text in ["puy"]:
@@ -2988,7 +2989,7 @@ def bot(op):
                 	
             elif msg.text in ["Attack"]:
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': "ua7fb5762d5066629323d113e1266e8ca',"}
+                msg.contentMetadata = {'mid': "ue4e06387a5cae9fdf8cd018a41b35e98',"}
                 cl.sendMessage(msg)
                 cl.sendMessage(msg)
                 cl.sendMessage(msg)
@@ -3006,7 +3007,7 @@ def bot(op):
                 
             elif msg.text.lower() == '.....':
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': "ua7fb5762d5066629323d113e1266e8ca',"}
+                msg.contentMetadata = {'mid': "ue4e06387a5cae9fdf8cd018a41b35e98',"}
                 cl.sendMessage(msg)    
 #=================================PUY SCRIPT FINISHED =============================================#
             
